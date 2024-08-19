@@ -1,0 +1,10 @@
+<h1 [style.color]="currentColor">{{ title }}</h1>
+<div *ngFor="let section of sections">
+  <app-section
+    [title]="section.title"
+    [body]="section.body"
+    [color]="section.color"
+    [currentColor]="currentColor"
+    (colorChange)="onColorChange($event)">
+  </app-section>
+</div>
